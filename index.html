@@ -160,6 +160,20 @@
   .feat-card img{width:100%;border-radius:18px;background:var(--ivory)}
   .feat-list{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
   .chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:.88rem;font-weight:600}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+  .price-item{background:#fff;color:var(--navy);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+  .price-item .name{font-weight:600;font-size:.9rem;line-height:1.25}
+  .price-item .from{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .price-item .amt{font-family:'Fredoka';font-weight:600;font-size:1.5rem;color:var(--carwash-d);line-height:1}
+  .feature .price-note{color:rgba(255,255,255,.85);font-size:.84rem;margin-bottom:22px}
+  .btn-ghost-light{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+  .btn-ghost-light:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+  .lightbox{position:fixed;inset:0;background:rgba(10,31,44,.94);z-index:200;display:none;place-items:center;padding:24px}
+  .lightbox.open{display:grid}
+  .lightbox img{max-width:100%;max-height:90vh;border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+  .lightbox .close{position:absolute;top:16px;right:20px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.15);border:0;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1}
+  .lightbox .close:hover{background:rgba(255,255,255,.28)}
+  .lightbox .hint{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font-size:.85rem}
 
   /* ===== ABOUT ===== */
   .about{background:var(--ivory-2)}
@@ -265,8 +279,15 @@
 </head>
 <body>
 
+<!-- Visor de lista de precios -->
+<div class="lightbox" id="pricesBox" onclick="closePrices(event)">
+  <button class="close" onclick="closePrices(event)" aria-label="Cerrar">×</button>
+  <img src="assets/precios-carwash.jpg" alt="Lista de precios ISLA SPOT Car Wash" />
+  <div class="hint" data-es="Toca fuera de la imagen para cerrar" data-en="Tap outside the image to close">Toca fuera de la imagen para cerrar</div>
+</div>
+
 <!-- WhatsApp floating -->
-<a class="wa-fab" href="#contacto" aria-label="WhatsApp">
+<a class="wa-fab" href="https://wa.me/50761976277?text=Hola%20ISLA%20SPOT%2C%20quiero%20info" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
 </a>
 
@@ -376,13 +397,19 @@
       <h2 data-es="Car Wash" data-en="Car Wash">Car Wash</h2>
       <p class="lead" data-es="Tu carro también merece su momento." data-en="Your car deserves its moment too.">Tu carro también merece su momento.</p>
       <p data-es="El corazón de ISLA SPOT. Lavado profesional y cuidadoso para dejar tu auto impecable mientras te relajas, comes algo rico o la pasas en familia. Rápido, con buena vibra y hecho con calidad." data-en="The heart of ISLA SPOT. Professional, careful wash to leave your car spotless while you relax, grab a bite or enjoy family time. Fast, good-vibes and made with quality.">El corazón de ISLA SPOT. Lavado profesional y cuidadoso para dejar tu auto impecable mientras te relajas, comes algo rico o la pasas en familia. Rápido, con buena vibra y hecho con calidad.</p>
-      <div class="feat-list">
-        <span class="chip" data-es="✓ Lavado básico" data-en="✓ Basic wash">✓ Lavado básico</span>
-        <span class="chip" data-es="✓ Lavado completo" data-en="✓ Full wash">✓ Lavado completo</span>
-        <span class="chip" data-es="✓ Detallado premium" data-en="✓ Premium detailing">✓ Detallado premium</span>
-        <span class="chip" data-es="✓ Encerado y brillo" data-en="✓ Wax &amp; shine">✓ Encerado y brillo</span>
+      <div class="price-grid">
+        <div class="price-item"><span class="name" data-es="Lavado por fuera" data-en="Exterior wash">Lavado por fuera</span><span class="from" data-es="desde" data-en="from">desde</span><span class="amt">$7</span></div>
+        <div class="price-item"><span class="name" data-es="Lavado completo" data-en="Full wash">Lavado completo</span><span class="from" data-es="desde" data-en="from">desde</span><span class="amt">$10</span></div>
+        <div class="price-item"><span class="name">Lavado "La Isla"</span><span class="from" data-es="desde" data-en="from">desde</span><span class="amt">$25</span></div>
+        <div class="price-item"><span class="name" data-es="Detallado &amp; extras" data-en="Detailing &amp; extras">Detallado &amp; extras</span><span class="from" data-es="desde" data-en="from">desde</span><span class="amt">$15</span></div>
+        <div class="price-item"><span class="name" data-es="Cerámicos" data-en="Ceramics">Cerámicos</span><span class="from" data-es="desde" data-en="from">desde</span><span class="amt">$50</span></div>
+        <div class="price-item"><span class="name" data-es="Motos" data-en="Motorcycles">Motos</span><span class="from" data-es="desde" data-en="from">desde</span><span class="amt">$6</span></div>
       </div>
-      <a href="#menu" class="btn btn-yellow" data-es="Ver precios" data-en="See prices">Ver precios</a>
+      <p class="price-note" data-es="Los precios varían según el tamaño del vehículo (sedán, SUV, pickup, XL…)." data-en="Prices vary by vehicle size (sedan, SUV, pickup, XL…).">Los precios varían según el tamaño del vehículo (sedán, SUV, pickup, XL…).</p>
+      <div class="hero-cta">
+        <button class="btn btn-yellow" onclick="openPrices()" data-es="📋 Ver lista completa" data-en="📋 See full price list">📋 Ver lista completa</button>
+        <a class="btn btn-ghost-light" href="https://wa.me/50761976277?text=Hola%20ISLA%20SPOT%2C%20quiero%20info%20del%20car%20wash" target="_blank" rel="noopener" data-es="Escríbenos por WhatsApp" data-en="Message us on WhatsApp">Escríbenos por WhatsApp</a>
+      </div>
     </div>
     <div class="feat-card">
       <img src="assets/spot-carwash.png" alt="ISLA SPOT Car Wash" />
@@ -553,7 +580,7 @@
       <div>
         <h5 data-es="Contacto" data-en="Contact">Contacto</h5>
         <a href="https://instagram.com/laislaspot" target="_blank" rel="noopener">Instagram · @laislaspot</a>
-        <a href="#" data-es="WhatsApp · próximamente" data-en="WhatsApp · coming soon">WhatsApp · próximamente</a>
+        <a href="https://wa.me/50761976277?text=Hola%20ISLA%20SPOT" target="_blank" rel="noopener">WhatsApp · 6197-6277</a>
         <a href="#" data-es="Correo · próximamente" data-en="Email · coming soon">Correo · próximamente</a>
         <a href="#suscribir" data-es="Suscríbete" data-en="Subscribe">Suscríbete</a>
       </div>
@@ -593,6 +620,11 @@
     return false;
   }
   document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Visor de lista de precios
+  function openPrices(){document.getElementById('pricesBox').classList.add('open');document.body.style.overflow='hidden';}
+  function closePrices(e){if(e&&e.target&&e.target.tagName==='IMG')return;document.getElementById('pricesBox').classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closePrices();});
 </script>
 </body>
 </html>
