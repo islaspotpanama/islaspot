@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ISLA SPOT — Car Wash · Food · Fun · Family</title>
+<meta name="description" content="Más que un lugar, un destino para disfrutar. Car wash, food trucks, diversión y familia en un solo spot. Panamá." />
+<link rel="icon" href="assets/logo-vertical.png" />
+<link rel="canonical" href="https://islaspotpty.com/" />
+<meta name="theme-color" content="#85c8ff" />
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ISLA SPOT" />
+<meta property="og:title" content="ISLA SPOT — Car Wash · Food · Fun · Family" />
+<meta property="og:description" content="Más que un lugar, un destino para disfrutar. Car wash, food, diversión y familia en un solo spot. Panamá." />
+<meta property="og:url" content="https://islaspotpty.com/" />
+<meta property="og:image" content="https://islaspotpty.com/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="es_PA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ISLA SPOT — Car Wash · Food · Fun · Family" />
+<meta name="twitter:description" content="Más que un lugar, un destino para disfrutar. Panamá." />
+<meta name="twitter:image" content="https://islaspotpty.com/assets/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* ===== Paleta oficial Brandbook ISLA SPOT ===== */
+    --sky:#85c8ff;         /* Azul cielo */
+    --sky-soft:#c7e6ff;
+    --sky-deep:#5cb0f5;
+    --ivory:#f8f6ec;       /* Marfil */
+    --ivory-2:#fdfcf6;
+    --yellow:#ffb80b;      /* Amarillo (sol) */
+    --yellow-2:#ffca47;
+    --navy:#123b52;        /* Azul profundo */
+    --navy-2:#1c5271;
+    /* Colores por experiencia */
+    --carwash:#16b8b0;
+    --carwash-d:#0f938c;
+    --food:#7657c8;
+    --food-d:#5f43ab;
+    --fun:#4faf62;
+    --fun-d:#3d9350;
+    --family:#f47c38;
+    --family-d:#e0641f;
+    /* utils */
+    --ink:#123b52;
+    --muted:#5c7484;
+    --radius:24px;
+    --shadow:0 20px 44px -20px rgba(18,59,82,.38);
+    --shadow-sm:0 10px 24px -14px rgba(18,59,82,.34);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Open Sans',system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Fredoka',sans-serif;line-height:1.08;letter-spacing:-.005em;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka';font-weight:600;font-size:1rem;padding:13px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .2s ease;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 12px 26px -12px rgba(255,184,11,.9)}
+  .btn-yellow:hover{background:var(--yellow-2)}
+  .btn-teal{background:var(--carwash);color:#fff;box-shadow:0 12px 26px -12px rgba(22,184,176,.8)}
+  .btn-teal:hover{background:var(--carwash-d)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-2)}
+  .btn-ghost{background:transparent;color:var(--navy);border:2px solid rgba(18,59,82,.2)}
+  .btn-ghost:hover{border-color:var(--navy)}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka';font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--carwash-d)}
+  .eyebrow::before{content:"";width:26px;height:3px;background:var(--yellow);border-radius:3px}
+  section{position:relative}
+
+  /* ===== NAV ===== */
+  header{position:sticky;top:0;z-index:50;background:rgba(248,246,236,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(18,59,82,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+  .nav .logo{height:46px;width:auto}
+  .brand-badge{display:flex;align-items:center;line-height:0}
+  .logo-anim{height:56px;width:auto;border-radius:14px;display:block;box-shadow:0 8px 18px -8px rgba(18,59,82,.4);background:var(--sky);transition:transform .2s ease}
+  .brand-badge:hover .logo-anim{transform:scale(1.05) rotate(-1deg)}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{font-weight:600;font-size:.96rem;color:var(--navy);opacity:.82;transition:opacity .2s,color .2s}
+  .nav-links a:hover{opacity:1;color:var(--carwash-d)}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .lang{display:flex;background:rgba(18,59,82,.08);border-radius:999px;padding:4px}
+  .lang button{border:0;background:transparent;cursor:pointer;padding:6px 13px;border-radius:999px;color:var(--navy);opacity:.6;font-weight:700;font-family:'Fredoka';font-size:.82rem}
+  .lang button.on{background:var(--navy);color:#fff;opacity:1}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+  .burger span{display:block;width:24px;height:2.5px;background:var(--navy);border-radius:3px;margin:5px 0;transition:.25s}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;overflow:hidden;padding:70px 0 90px;
+    background:
+      radial-gradient(1100px 620px at 80% -10%, var(--sky) 0%, rgba(133,200,255,.35) 42%, transparent 68%),
+      radial-gradient(760px 460px at 6% 118%, rgba(22,184,176,.16), transparent 60%),
+      var(--ivory);}
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);color:var(--navy);margin:16px 0 4px}
+  .hero h1 .hl{color:var(--carwash-d)}
+  .hero .sub{font-size:1.12rem;color:var(--muted);max-width:490px;margin:16px 0 26px}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(18,59,82,.08);padding:8px 15px;border-radius:999px;font-weight:600;font-size:.86rem;color:var(--navy);box-shadow:var(--shadow-sm)}
+  .tag .dot{width:9px;height:9px;border-radius:50%}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-art{position:relative;display:grid;place-items:center}
+  .art-card{position:relative;width:100%;max-width:480px;aspect-ratio:1/1.02;border-radius:34px;overflow:hidden;
+    background:linear-gradient(165deg,var(--sky) 0%,var(--sky-deep) 100%);
+    box-shadow:var(--shadow);display:grid;place-items:center}
+  .art-card .clouds{position:absolute;inset:0;background:
+     radial-gradient(60px 22px at 22% 24%, rgba(255,255,255,.9),transparent 70%),
+     radial-gradient(80px 26px at 78% 18%, rgba(255,255,255,.75),transparent 70%),
+     radial-gradient(50px 18px at 60% 32%, rgba(255,255,255,.7),transparent 70%);}
+  .art-card .sand{position:absolute;left:0;right:0;bottom:0;height:20%;background:linear-gradient(var(--ivory-2),var(--ivory));}
+  .art-card .logo{position:relative;width:66%;max-width:320px;z-index:2;filter:drop-shadow(0 14px 26px rgba(18,59,82,.28))}
+  .float{position:absolute;background:#fff;border-radius:16px;padding:11px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:9px;font-family:'Fredoka';font-weight:600;font-size:.9rem;color:var(--navy);z-index:3}
+  .float .ic{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff}
+  .float .ic svg{width:16px;height:16px}
+  .float.f1{top:26px;left:-12px;animation:bob 5s ease-in-out infinite}
+  .float.f2{bottom:42px;right:-10px;animation:bob 5s ease-in-out .8s infinite}
+  @keyframes bob{50%{transform:translateY(-10px)}}
+
+  .marquee{background:var(--navy);color:var(--ivory);overflow:hidden;white-space:nowrap;padding:15px 0}
+  .marquee-track{display:inline-flex;gap:0;animation:scroll 26s linear infinite;font-family:'Fredoka';font-weight:600;font-size:1.05rem;letter-spacing:.05em}
+  .marquee-track span{display:inline-flex;align-items:center}
+  .marquee-track b{color:var(--yellow);margin:0 26px;font-size:.7rem}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ===== SECTION SHELL ===== */
+  .sec{padding:90px 0}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 54px}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3rem);color:var(--navy);margin:14px 0 10px}
+  .sec-head p{color:var(--muted);font-size:1.06rem}
+
+  /* ===== EXPERIENCIAS ===== */
+  .exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .exp{background:#fff;border-radius:var(--radius);padding:26px 22px 28px;box-shadow:var(--shadow-sm);border:1px solid rgba(18,59,82,.05);text-align:center;transition:transform .22s ease,box-shadow .22s ease;position:relative;overflow:hidden}
+  .exp::before{content:"";position:absolute;top:0;left:0;right:0;height:6px}
+  .exp:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+  .exp .logo-wrap{height:150px;display:grid;place-items:center;margin-bottom:14px}
+  .exp .logo-wrap img{max-height:150px;width:auto}
+  .exp h3{font-size:1.28rem;color:var(--navy);margin-bottom:6px}
+  .exp p{color:var(--muted);font-size:.93rem}
+  .exp.cw::before{background:var(--carwash)} .exp.cw h3{color:var(--carwash-d)}
+  .exp.fo::before{background:var(--food)}    .exp.fo h3{color:var(--food-d)}
+  .exp.fu::before{background:var(--fun)}     .exp.fu h3{color:var(--fun-d)}
+  .exp.fa::before{background:var(--family)}  .exp.fa h3{color:var(--family-d)}
+
+  /* ===== CAR WASH FEATURE ===== */
+  .feature{background:linear-gradient(135deg,var(--carwash),var(--carwash-d));color:#fff}
+  .feat-in{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .feat-in .badge{display:inline-flex;align-items:center;gap:7px;background:var(--yellow);color:var(--navy);font-family:'Fredoka';font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 15px;border-radius:999px;margin-bottom:18px}
+  .feat-in h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:12px}
+  .feat-in .lead{font-size:1.2rem;font-family:'Fredoka';font-weight:500;color:#fff;margin-bottom:10px}
+  .feat-in p{color:rgba(255,255,255,.9);font-size:1.04rem;max-width:460px;margin-bottom:24px}
+  .feat-card{background:#fff;border-radius:28px;padding:14px;box-shadow:var(--shadow)}
+  .feat-card img{width:100%;border-radius:18px;background:var(--ivory)}
+  .feat-list{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:.88rem;font-weight:600}
+
+  /* ===== ABOUT ===== */
+  .about{background:var(--ivory-2)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about h2{font-size:clamp(2rem,4.4vw,2.9rem);color:var(--navy);margin:14px 0 16px}
+  .about .quote{font-family:'Fredoka';font-weight:500;font-size:1.35rem;color:var(--carwash-d);margin-bottom:16px}
+  .about p{color:var(--muted);font-size:1.06rem;margin-bottom:16px;max-width:520px}
+  .mv{display:grid;gap:16px;margin-top:8px}
+  .mv-card{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:var(--shadow-sm);border-left:5px solid var(--yellow)}
+  .mv-card:nth-child(2){border-left-color:var(--carwash)}
+  .mv-card h4{font-family:'Fredoka';font-size:1.1rem;color:var(--navy);margin-bottom:5px}
+  .mv-card p{margin:0;font-size:.96rem}
+  .about-visual{position:relative;border-radius:28px;min-height:420px;overflow:hidden;box-shadow:var(--shadow);background:linear-gradient(165deg,var(--sky),var(--sky-deep));display:grid;place-items:center}
+  .about-visual .clouds{position:absolute;inset:0;background:radial-gradient(70px 24px at 24% 22%,rgba(255,255,255,.85),transparent 70%),radial-gradient(90px 28px at 76% 30%,rgba(255,255,255,.7),transparent 70%)}
+  .about-visual .sand{position:absolute;left:0;right:0;bottom:0;height:18%;background:linear-gradient(var(--ivory-2),var(--ivory))}
+  .about-visual img{position:relative;width:60%;max-width:280px;z-index:2;filter:drop-shadow(0 14px 26px rgba(18,59,82,.28))}
+
+  /* ===== MENU / PRICES ===== */
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .mcard{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid rgba(18,59,82,.05)}
+  .mcard .top{padding:20px 24px;color:#fff;display:flex;align-items:center;gap:12px}
+  .mcard .top svg{width:26px;height:26px}
+  .mcard.t1 .top{background:linear-gradient(135deg,var(--carwash),var(--carwash-d))}
+  .mcard.t2 .top{background:linear-gradient(135deg,var(--food),var(--food-d))}
+  .mcard.t3 .top{background:linear-gradient(135deg,var(--family),var(--family-d))}
+  .mcard .top h3{font-size:1.2rem}
+  .mcard .body{padding:20px 24px}
+  .mrow{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px dashed rgba(18,59,82,.12);font-size:.95rem}
+  .mrow:last-child{border-bottom:0}
+  .mrow span:first-child{font-weight:500}
+  .mrow .soon{color:var(--carwash-d);font-weight:700;font-size:.78rem;background:rgba(22,184,176,.12);padding:3px 11px;border-radius:999px;font-family:'Fredoka'}
+
+  /* ===== PROMO ===== */
+  .promo{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff}
+  .promo-in{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .promo h2{font-size:clamp(2rem,4.4vw,2.8rem);margin-bottom:14px}
+  .promo p{color:rgba(255,255,255,.86);font-size:1.08rem;margin-bottom:24px;max-width:470px}
+  .promo-card{background:var(--yellow);color:var(--navy);border-radius:26px;padding:38px 30px;box-shadow:var(--shadow);text-align:center}
+  .promo-card .big{font-family:'Fredoka';font-weight:700;font-size:3.6rem;line-height:1}
+  .promo-card .lbl{font-family:'Fredoka';font-weight:600;font-size:1.1rem;margin:8px 0 2px}
+  .promo-card small{opacity:.8}
+
+  /* ===== LOCATION ===== */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .map-box{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);min-height:400px;border:1px solid rgba(18,59,82,.1)}
+  .map-box iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+  .loc-info{display:flex;flex-direction:column;gap:16px}
+  .info-row{display:flex;gap:16px;background:#fff;border-radius:18px;padding:20px 22px;box-shadow:var(--shadow-sm);border:1px solid rgba(18,59,82,.05)}
+  .info-row .ic{width:48px;height:48px;flex:0 0 auto;border-radius:14px;background:rgba(22,184,176,.13);display:grid;place-items:center}
+  .info-row .ic svg{width:24px;height:24px;color:var(--carwash-d)}
+  .info-row h4{font-family:'Fredoka';font-size:1.05rem;color:var(--navy);margin-bottom:3px}
+  .info-row p{color:var(--muted);font-size:.94rem}
+  .info-row a{color:var(--carwash-d);font-weight:700}
+
+  /* ===== SUBSCRIBE ===== */
+  .sub-sec{background:linear-gradient(165deg,var(--sky),var(--sky-deep));color:var(--navy);position:relative;overflow:hidden}
+  .sub-sec .clouds{position:absolute;inset:0;background:radial-gradient(80px 26px at 18% 30%,rgba(255,255,255,.6),transparent 70%),radial-gradient(90px 28px at 82% 24%,rgba(255,255,255,.5),transparent 70%);pointer-events:none}
+  .sub-in{text-align:center;max-width:620px;margin:0 auto;position:relative}
+  .sub-in .eyebrow{color:var(--navy)}
+  .sub-in .eyebrow::before{background:var(--navy)}
+  .sub-in h2{font-size:clamp(1.9rem,4.4vw,2.7rem);margin:14px 0 10px;color:var(--navy)}
+  .sub-in p{color:var(--navy);opacity:.82;margin-bottom:26px}
+  .sub-form{display:flex;gap:12px;max-width:470px;margin:0 auto;flex-wrap:wrap}
+  .sub-form input{flex:1;min-width:200px;border:0;border-radius:999px;padding:15px 22px;font-size:.98rem;font-family:inherit}
+  .sub-form input:focus{outline:3px solid var(--navy)}
+  .sub-msg{margin-top:14px;font-family:'Fredoka';font-weight:600;color:var(--navy);min-height:22px}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy);color:rgba(255,255,255,.72);padding:58px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:38px}
+  .foot-grid h5{color:#fff;font-family:'Fredoka';font-weight:600;font-size:1.05rem;margin-bottom:14px}
+  .foot-grid a{display:block;color:rgba(255,255,255,.7);margin-bottom:9px;font-size:.94rem;transition:color .2s}
+  .foot-grid a:hover{color:var(--sky)}
+  .foot-brand img{height:66px;width:auto;margin-bottom:14px}
+  .foot-brand p{font-size:.94rem;max-width:300px}
+  .socials{display:flex;gap:12px;margin-top:16px}
+  .socials a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.09);display:grid;place-items:center;margin:0}
+  .socials a:hover{background:var(--carwash)}
+  .socials svg{width:20px;height:20px;color:#fff}
+  .foot-bot{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem}
+
+  .wa-fab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:transform .2s}
+  .wa-fab:hover{transform:scale(1.08)}
+  .wa-fab svg{width:32px;height:32px;color:#fff}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:920px){
+    .hero-grid,.about-grid,.promo-in,.loc-grid,.feat-in{grid-template-columns:1fr;gap:36px}
+    .exp-grid{grid-template-columns:1fr 1fr}
+    .menu-grid{grid-template-columns:1fr}
+    .hero-art{order:-1}
+    .nav-links{display:none}
+    .burger{display:block}
+    .nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--ivory-2);padding:20px 22px;gap:16px;box-shadow:var(--shadow);border-bottom:1px solid rgba(18,59,82,.08)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){
+    .exp-grid,.stats,.foot-grid{grid-template-columns:1fr}
+    .sec{padding:62px 0}
+    .hero{padding:44px 0 66px}
+  }
+</style>
+</head>
+<body>
+
+<!-- WhatsApp floating -->
+<a class="wa-fab" href="#contacto" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand-badge" aria-label="ISLA SPOT">
+      <video class="logo-anim" autoplay muted loop playsinline poster="assets/logo-anim-poster.jpg">
+        <source src="assets/logo-anim.webm" type="video/webm" />
+        <source src="assets/logo-anim.mp4" type="video/mp4" />
+      </video>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#experiencias" data-es="Experiencias" data-en="Experiences">Experiencias</a>
+      <a href="#carwash" data-es="Car Wash" data-en="Car Wash">Car Wash</a>
+      <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
+      <a href="#menu" data-es="Precios &amp; Menú" data-en="Prices &amp; Menu">Precios &amp; Menú</a>
+      <a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button id="btnEs" class="on" onclick="setLang('es')">ES</button>
+        <button id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#contacto" class="btn btn-yellow" data-es="Escríbenos" data-en="Contact us" style="padding:10px 20px">Escríbenos</a>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <span class="eyebrow" data-es="Panamá · Plaza de experiencias" data-en="Panama · Experiences plaza">Panamá · Plaza de experiencias</span>
+      <h1 data-es="Más que un lugar.<br>Un <span class='hl'>destino</span> para disfrutar." data-en="More than a place.<br>A <span class='hl'>destination</span> to enjoy.">Más que un lugar.<br>Un <span class="hl">destino</span> para disfrutar.</h1>
+      <p class="sub" data-es="Car wash, comida, juego y familia conviven en un mismo spot. Llega, resuelve algo o simplemente quédate a pasarla bien." data-en="Car wash, food, play and family all in one spot. Come, get something done or just stay and have a great time.">Car wash, comida, juego y familia conviven en un mismo spot. Llega, resuelve algo o simplemente quédate a pasarla bien.</p>
+      <div class="tags">
+        <span class="tag"><span class="dot" style="background:var(--carwash)"></span>Car Wash</span>
+        <span class="tag"><span class="dot" style="background:var(--food)"></span>Food</span>
+        <span class="tag"><span class="dot" style="background:var(--fun)"></span>Fun</span>
+        <span class="tag"><span class="dot" style="background:var(--family)"></span>Family</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#experiencias" class="btn btn-teal" data-es="Ver experiencias" data-en="See experiences">Ver experiencias</a>
+        <a href="#ubicacion" class="btn btn-ghost" data-es="Cómo llegar" data-en="Get directions">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="art-card">
+        <div class="clouds"></div>
+        <img class="logo" src="assets/logo-vertical.png" alt="ISLA SPOT" />
+        <div class="sand"></div>
+      </div>
+      <div class="float f1"><span class="ic" style="background:var(--carwash)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v6M9 6l3-3 3 3M5 13h14l-1 7H6z"/></svg></span><span data-es="Auto reluciente" data-en="Shiny ride">Auto reluciente</span></div>
+      <div class="float f2"><span class="ic" style="background:var(--family)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="8" r="2.4"/><circle cx="16" cy="9" r="2"/><path d="M4 19c0-2.6 2.2-4.5 5-4.5s5 1.9 5 4.5M14 19c0-1.8 1-3.2 2.8-3.2S19.6 17.2 19.6 19"/></svg></span><span data-es="En familia" data-en="With family">En familia</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>CAR WASH <b>●</b> FOOD <b>●</b> FUN <b>●</b> FAMILY <b>●</b> CAR WASH <b>●</b> FOOD <b>●</b> FUN <b>●</b> FAMILY <b>●</b> </span>
+    <span>CAR WASH <b>●</b> FOOD <b>●</b> FUN <b>●</b> FAMILY <b>●</b> CAR WASH <b>●</b> FOOD <b>●</b> FUN <b>●</b> FAMILY <b>●</b> </span>
+  </div>
+</div>
+
+<!-- ===== EXPERIENCIAS ===== -->
+<section class="sec" id="experiencias">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-es="Las experiencias" data-en="The experiences">Las experiencias</span>
+      <h2 data-es="Cuatro formas de disfrutar, un solo spot" data-en="Four ways to enjoy, one single spot">Cuatro formas de disfrutar, un solo spot</h2>
+      <p data-es="Cada área tiene su propia personalidad, pero todas forman parte de la misma experiencia ISLA SPOT." data-en="Each area has its own personality, but all are part of the same ISLA SPOT experience.">Cada área tiene su propia personalidad, pero todas forman parte de la misma experiencia ISLA SPOT.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp cw">
+        <div class="logo-wrap"><img src="assets/spot-carwash.png" alt="ISLA SPOT Car Wash" /></div>
+        <h3 data-es="Car Wash" data-en="Car Wash">Car Wash</h3>
+        <p data-es="Tu carro también merece su momento." data-en="Your car deserves its moment too.">Tu carro también merece su momento.</p>
+      </div>
+      <div class="exp fo">
+        <div class="logo-wrap"><img src="assets/spot-food.png" alt="ISLA SPOT Food" /></div>
+        <h3 data-es="Food" data-en="Food">Food</h3>
+        <p data-es="Comida que se disfruta mejor acompañado." data-en="Food that's better enjoyed together.">Comida que se disfruta mejor acompañado.</p>
+      </div>
+      <div class="exp fu">
+        <div class="logo-wrap"><img src="assets/spot-fun.png" alt="ISLA SPOT Fun" /></div>
+        <h3 data-es="Fun" data-en="Fun">Fun</h3>
+        <p data-es="Un poco de juego siempre viene bien." data-en="A little play always feels good.">Un poco de juego siempre viene bien.</p>
+      </div>
+      <div class="exp fa">
+        <div class="logo-wrap"><img src="assets/spot-family.png" alt="ISLA SPOT Family" /></div>
+        <h3 data-es="Family" data-en="Family">Family</h3>
+        <p data-es="Tiempo para estar juntos." data-en="Time to be together.">Tiempo para estar juntos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAR WASH FEATURE ===== -->
+<section class="sec feature" id="carwash">
+  <div class="wrap feat-in">
+    <div>
+      <span class="badge" data-es="⭐ Lo más destacado" data-en="⭐ Our highlight">⭐ Lo más destacado</span>
+      <h2 data-es="Car Wash" data-en="Car Wash">Car Wash</h2>
+      <p class="lead" data-es="Tu carro también merece su momento." data-en="Your car deserves its moment too.">Tu carro también merece su momento.</p>
+      <p data-es="El corazón de ISLA SPOT. Lavado profesional y cuidadoso para dejar tu auto impecable mientras te relajas, comes algo rico o la pasas en familia. Rápido, con buena vibra y hecho con calidad." data-en="The heart of ISLA SPOT. Professional, careful wash to leave your car spotless while you relax, grab a bite or enjoy family time. Fast, good-vibes and made with quality.">El corazón de ISLA SPOT. Lavado profesional y cuidadoso para dejar tu auto impecable mientras te relajas, comes algo rico o la pasas en familia. Rápido, con buena vibra y hecho con calidad.</p>
+      <div class="feat-list">
+        <span class="chip" data-es="✓ Lavado básico" data-en="✓ Basic wash">✓ Lavado básico</span>
+        <span class="chip" data-es="✓ Lavado completo" data-en="✓ Full wash">✓ Lavado completo</span>
+        <span class="chip" data-es="✓ Detallado premium" data-en="✓ Premium detailing">✓ Detallado premium</span>
+        <span class="chip" data-es="✓ Encerado y brillo" data-en="✓ Wax &amp; shine">✓ Encerado y brillo</span>
+      </div>
+      <a href="#menu" class="btn btn-yellow" data-es="Ver precios" data-en="See prices">Ver precios</a>
+    </div>
+    <div class="feat-card">
+      <img src="assets/spot-carwash.png" alt="ISLA SPOT Car Wash" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="sec about" id="nosotros">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow" data-es="Sobre nosotros" data-en="About us">Sobre nosotros</span>
+      <h2 data-es="Un destino para disfrutar" data-en="A destination to enjoy">Un destino para disfrutar</h2>
+      <p class="quote" data-es="“Un lugar. Muchas razones para volver.”" data-en="“One place. Many reasons to come back.”">“Un lugar. Muchas razones para volver.”</p>
+      <p data-es="ISLA SPOT nace como un espacio pensado para hacer de una visita mucho más que una simple parada. Toma inspiración de los destinos tropicales: el sol, las palmeras, el color y esa sensación de estar en un lugar donde quieres quedarte un rato más." data-en="ISLA SPOT was born as a space designed to make a visit much more than just a stop. It draws inspiration from tropical destinations: the sun, the palm trees, the color and that feeling of being somewhere you want to stay a little longer.">ISLA SPOT nace como un espacio pensado para hacer de una visita mucho más que una simple parada. Toma inspiración de los destinos tropicales: el sol, las palmeras, el color y esa sensación de estar en un lugar donde quieres quedarte un rato más.</p>
+      <div class="mv">
+        <div class="mv-card">
+          <h4 data-es="Misión" data-en="Mission">Misión</h4>
+          <p data-es="Crear momentos que valga la pena compartir." data-en="Create moments worth sharing.">Crear momentos que valga la pena compartir.</p>
+        </div>
+        <div class="mv-card">
+          <h4 data-es="Visión" data-en="Vision">Visión</h4>
+          <p data-es="Convertirnos en un destino que las personas quieran volver a visitar." data-en="Become a destination people want to visit again and again.">Convertirnos en un destino que las personas quieran volver a visitar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="clouds"></div>
+      <img src="assets/logo-vertical.png" alt="ISLA SPOT" />
+      <div class="sand"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU / PRICES ===== -->
+<section class="sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-es="Precios &amp; Menú" data-en="Prices &amp; Menu">Precios &amp; Menú</span>
+      <h2 data-es="Consulta precios y opciones" data-en="Check prices and options">Consulta precios y opciones</h2>
+      <p data-es="Estamos afinando los detalles de apertura. Muy pronto verás aquí todos los precios del car wash y el menú completo de los food trucks." data-en="We're fine-tuning the opening details. Very soon you'll see all car wash prices and the full food truck menu here.">Estamos afinando los detalles de apertura. Muy pronto verás aquí todos los precios del car wash y el menú completo de los food trucks.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="mcard t1">
+        <div class="top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16h16M6 16l1.2-5A2.5 2.5 0 019.6 9h4.8a2.5 2.5 0 012.4 2l1.2 5"/><circle cx="8" cy="17.5" r="1.8"/><circle cx="16" cy="17.5" r="1.8"/></svg><h3 data-es="Car Wash" data-en="Car Wash">Car Wash</h3></div>
+        <div class="body">
+          <div class="mrow"><span data-es="Lavado básico" data-en="Basic wash">Lavado básico</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+          <div class="mrow"><span data-es="Lavado completo" data-en="Full wash">Lavado completo</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+          <div class="mrow"><span data-es="Detallado premium" data-en="Premium detailing">Detallado premium</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+          <div class="mrow"><span data-es="Encerado y brillo" data-en="Wax &amp; shine">Encerado y brillo</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+        </div>
+      </div>
+      <div class="mcard t2">
+        <div class="top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11h13v6H3zM16 13h3l2 2v2h-5"/><circle cx="6.5" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><h3 data-es="Food" data-en="Food">Food</h3></div>
+        <div class="body">
+          <div class="mrow"><span data-es="Comida rápida" data-en="Fast food">Comida rápida</span><span class="soon" data-es="Menú pronto" data-en="Menu soon">Menú pronto</span></div>
+          <div class="mrow"><span data-es="Antojos &amp; snacks" data-en="Snacks &amp; treats">Antojos &amp; snacks</span><span class="soon" data-es="Menú pronto" data-en="Menu soon">Menú pronto</span></div>
+          <div class="mrow"><span data-es="Bebidas &amp; refrescos" data-en="Drinks &amp; refreshers">Bebidas &amp; refrescos</span><span class="soon" data-es="Menú pronto" data-en="Menu soon">Menú pronto</span></div>
+          <div class="mrow"><span data-es="Postres" data-en="Desserts">Postres</span><span class="soon" data-es="Menú pronto" data-en="Menu soon">Menú pronto</span></div>
+        </div>
+      </div>
+      <div class="mcard t3">
+        <div class="top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="16.5" cy="9" r="2.3"/><path d="M2.5 20c0-3.3 2.7-5.5 6.5-5.5s6.5 2.2 6.5 5.5"/></svg><h3 data-es="Fun &amp; Family" data-en="Fun &amp; Family">Fun &amp; Family</h3></div>
+        <div class="body">
+          <div class="mrow"><span data-es="Zona de juego" data-en="Play zone">Zona de juego</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+          <div class="mrow"><span data-es="Área familiar" data-en="Family area">Área familiar</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+          <div class="mrow"><span data-es="Entretenimiento" data-en="Entertainment">Entretenimiento</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+          <div class="mrow"><span data-es="Eventos" data-en="Events">Eventos</span><span class="soon" data-es="Pronto" data-en="Soon">Pronto</span></div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:26px;color:var(--muted)" data-es="¿Quieres saber los precios apenas salgan? Suscríbete abajo y te avisamos." data-en="Want prices the moment they drop? Subscribe below and we'll let you know.">¿Quieres saber los precios apenas salgan? Suscríbete abajo y te avisamos.</p>
+  </div>
+</section>
+
+<!-- ===== PROMO ===== -->
+<section class="sec promo">
+  <div class="wrap promo-in">
+    <div>
+      <span class="eyebrow" style="color:var(--yellow)" data-es="Promo de apertura" data-en="Opening promo">Promo de apertura</span>
+      <h2 data-es="Prepárate para la gran apertura 🎉" data-en="Get ready for the grand opening 🎉">Prepárate para la gran apertura 🎉</h2>
+      <p data-es="Estamos por abrir nuestras puertas. Suscríbete y sé de los primeros en enterarte de las promociones de lanzamiento del Car Wash y mucho más." data-en="We're about to open our doors. Subscribe and be among the first to hear about the Car Wash launch promos and much more.">Estamos por abrir nuestras puertas. Suscríbete y sé de los primeros en enterarte de las promociones de lanzamiento del Car Wash y mucho más.</p>
+      <a href="#suscribir" class="btn btn-yellow" data-es="Quiero enterarme" data-en="Keep me posted">Quiero enterarme</a>
+    </div>
+    <div class="promo-card">
+      <div class="big">SOON</div>
+      <div class="lbl" data-es="Gran Apertura" data-en="Grand Opening">Gran Apertura</div>
+      <small data-es="Síguenos en @laislaspot" data-en="Follow us @laislaspot">Síguenos en @laislaspot</small>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="sec about" id="ubicacion">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-es="Ubicación" data-en="Location">Ubicación</span>
+      <h2 data-es="¿Cómo llegar a ISLA SPOT?" data-en="How to get to ISLA SPOT?">¿Cómo llegar a ISLA SPOT?</h2>
+      <p data-es="Estamos súper accesibles. Ubícanos en el mapa y llega sin perderte." data-en="We're super easy to reach. Find us on the map and get here without a hitch.">Estamos súper accesibles. Ubícanos en el mapa y llega sin perderte.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="map-box">
+        <iframe title="ISLA SPOT mapa" loading="lazy" src="https://www.google.com/maps?q=9.012854,-79.535047&z=16&output=embed"></iframe>
+      </div>
+      <div class="loc-info">
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <div>
+            <h4 data-es="Dirección" data-en="Address">Dirección</h4>
+            <p data-es="Panamá. Si vienes desde Villa La Fuente o desde Dos Mares hacia acá, nos encuentras fácil. (Número de local por confirmar)." data-en="Panama. Coming from Villa La Fuente or from Dos Mares this way, you'll find us easily. (Unit number to be confirmed).">Panamá. Si vienes desde Villa La Fuente o desde Dos Mares hacia acá, nos encuentras fácil. (Número de local por confirmar).</p>
+            <a href="https://www.google.com/maps?q=9.012854,-79.535047" target="_blank" rel="noopener" data-es="Abrir en Google Maps →" data-en="Open in Google Maps →">Abrir en Google Maps →</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div>
+            <h4 data-es="Horario" data-en="Hours">Horario</h4>
+            <p data-es="Todos los días · 8:00 AM – 10:00 PM" data-en="Every day · 8:00 AM – 10:00 PM">Todos los días · 8:00 AM – 10:00 PM</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 16V8h3.5a2.5 2.5 0 010 5H9"/></svg></div>
+          <div>
+            <h4 data-es="Parking" data-en="Parking">Parking</h4>
+            <p data-es="Estacionamiento amplio y cómodo en el sitio." data-en="Ample, comfortable on-site parking.">Estacionamiento amplio y cómodo en el sitio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUBSCRIBE ===== -->
+<section class="sec sub-sec" id="suscribir">
+  <div class="clouds"></div>
+  <div class="wrap sub-in">
+    <span class="eyebrow" data-es="Mantente al día" data-en="Stay in the loop">Mantente al día</span>
+    <h2 data-es="Suscríbete y no te pierdas nada" data-en="Subscribe and don't miss a thing">Suscríbete y no te pierdas nada</h2>
+    <p data-es="Déjanos tu correo y te avisamos de la apertura, precios del car wash, promos y menú de las comidas." data-en="Leave your email and we'll notify you about the opening, car wash prices, promos and the food menu.">Déjanos tu correo y te avisamos de la apertura, precios del car wash, promos y menú de las comidas.</p>
+    <form class="sub-form" onsubmit="return subscribe(event)">
+      <input type="email" required id="subEmail" placeholder="tucorreo@email.com" data-es-ph="tucorreo@email.com" data-en-ph="youremail@email.com" />
+      <button type="submit" class="btn btn-navy" data-es="Suscribirme" data-en="Subscribe">Suscribirme</button>
+    </form>
+    <div class="sub-msg" id="subMsg"></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-horizontal-blanco.png" alt="ISLA SPOT" />
+        <p data-es="Más que un lugar, un destino para disfrutar. Car wash, food, fun & family en un solo spot. Panamá." data-en="More than a place, a destination to enjoy. Car wash, food, fun & family in one spot. Panama.">Más que un lugar, un destino para disfrutar. Car wash, food, fun & family en un solo spot. Panamá.</p>
+        <div class="socials">
+          <a href="https://instagram.com/laislaspot" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#contacto" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5 data-es="Explora" data-en="Explore">Explora</h5>
+        <a href="#experiencias" data-es="Experiencias" data-en="Experiences">Experiencias</a>
+        <a href="#carwash" data-es="Car Wash" data-en="Car Wash">Car Wash</a>
+        <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
+        <a href="#menu" data-es="Precios &amp; Menú" data-en="Prices &amp; Menu">Precios &amp; Menú</a>
+        <a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
+      </div>
+      <div>
+        <h5 data-es="Contacto" data-en="Contact">Contacto</h5>
+        <a href="https://instagram.com/laislaspot" target="_blank" rel="noopener">Instagram · @laislaspot</a>
+        <a href="#" data-es="WhatsApp · próximamente" data-en="WhatsApp · coming soon">WhatsApp · próximamente</a>
+        <a href="#" data-es="Correo · próximamente" data-en="Email · coming soon">Correo · próximamente</a>
+        <a href="#suscribir" data-es="Suscríbete" data-en="Subscribe">Suscríbete</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="year"></span> ISLA SPOT. <span data-es="Todos los derechos reservados." data-en="All rights reserved.">Todos los derechos reservados.</span></span>
+      <span data-es="Hecho con buena vibra en Panamá 🌴" data-en="Made with good vibes in Panama 🌴">Hecho con buena vibra en Panamá 🌴</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-es]').forEach(el=>{
+      const val=lang==='en'?el.getAttribute('data-en'):el.getAttribute('data-es');
+      if(val!==null) el.innerHTML=val;
+    });
+    document.querySelectorAll('[data-es-ph]').forEach(el=>{
+      el.placeholder=lang==='en'?el.getAttribute('data-en-ph'):el.getAttribute('data-es-ph');
+    });
+    document.getElementById('btnEs').classList.toggle('on',lang==='es');
+    document.getElementById('btnEn').classList.toggle('on',lang==='en');
+    try{localStorage.setItem('islaspot_lang',lang);}catch(e){}
+  }
+  (function(){let s='es';try{s=localStorage.getItem('islaspot_lang')||'es';}catch(e){}setLang(s);})();
+
+  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+  function subscribe(e){
+    e.preventDefault();
+    const lang=document.documentElement.lang;
+    document.getElementById('subEmail').value='';
+    document.getElementById('subMsg').textContent=lang==='en'?'Thanks! We\'ll keep you posted. 🎉':'¡Listo! Te avisamos apenas abramos. 🎉';
+    return false;
+  }
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
