@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Precios · ISLA SPOT Car Wash</title>
+<meta name="description" content="Lista de precios del Car Wash de ISLA SPOT: lavados, encerado, detallado, interiores, cerámicos y papel ahumado. Panamá." />
+<link rel="icon" href="assets/logo-vertical.png" />
+<link rel="canonical" href="https://islaspotpty.com/precios.html" />
+<meta name="theme-color" content="#85c8ff" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="ISLA SPOT" />
+<meta property="og:title" content="Precios · ISLA SPOT Car Wash" />
+<meta property="og:description" content="Lista de precios del Car Wash de ISLA SPOT. Panamá." />
+<meta property="og:url" content="https://islaspotpty.com/precios.html" />
+<meta property="og:image" content="https://islaspotpty.com/assets/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --sky:#85c8ff;--sky-deep:#5cb0f5;--ivory:#f8f6ec;--ivory-2:#fdfcf6;
+    --yellow:#ffb80b;--yellow-2:#ffca47;--navy:#123b52;--navy-2:#1c5271;
+    --carwash:#16b8b0;--carwash-d:#0f938c;--food:#7657c8;--food-d:#5f43ab;
+    --fun:#4faf62;--fun-d:#3d9350;--family:#f47c38;--family-d:#e0641f;
+    --ink:#123b52;--muted:#5c7484;--shadow:0 20px 44px -20px rgba(18,59,82,.38);
+    --shadow-sm:0 10px 24px -14px rgba(18,59,82,.34);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Open Sans',system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.6}
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(248,246,236,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(18,59,82,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:14px;max-width:1100px;margin:0 auto;padding:0 20px}
+  .logo-anim{height:52px;width:auto;border-radius:13px;background:var(--sky);box-shadow:0 8px 18px -8px rgba(18,59,82,.4)}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .back{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.92rem;color:var(--navy);opacity:.85}
+  .back:hover{opacity:1;color:var(--carwash-d)}
+  .lang{display:flex;background:rgba(18,59,82,.08);border-radius:999px;padding:4px}
+  .lang button{border:0;background:transparent;cursor:pointer;padding:6px 12px;border-radius:999px;color:var(--navy);opacity:.6;font-weight:700;font-family:'Fredoka';font-size:.8rem}
+  .lang button.on{background:var(--navy);color:#fff;opacity:1}
+
+  .phero{background:linear-gradient(165deg,var(--sky),var(--sky-deep));padding:46px 0 40px;text-align:center;position:relative;overflow:hidden}
+  .phero .clouds{position:absolute;inset:0;background:radial-gradient(70px 24px at 20% 30%,rgba(255,255,255,.6),transparent 70%),radial-gradient(90px 28px at 82% 24%,rgba(255,255,255,.5),transparent 70%);pointer-events:none}
+  .phero .ey{font-family:'Fredoka';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--navy);opacity:.75}
+  .phero h1{font-size:clamp(2.1rem,6vw,3rem);color:var(--navy);margin:8px 0 8px}
+  .phero p{color:var(--navy);opacity:.82;max-width:520px;margin:0 auto;font-size:1rem}
+  .phero .note{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.75);border-radius:999px;padding:8px 16px;margin-top:16px;font-size:.84rem;font-weight:600;color:var(--navy)}
+
+  main{padding:34px 0 60px}
+  .cat{background:#fff;border-radius:18px;margin-bottom:14px;box-shadow:var(--shadow-sm);border:1px solid rgba(18,59,82,.05);overflow:hidden}
+  .cat-h{display:flex;align-items:center;gap:14px;padding:18px 20px;cursor:pointer;user-select:none}
+  .cat-h .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;flex:0 0 auto;font-size:1.4rem}
+  .cat-h .t{display:flex;flex-direction:column}
+  .cat-h .t b{font-family:'Fredoka';font-weight:600;font-size:1.15rem;color:var(--navy)}
+  .cat-h .t span{font-size:.8rem;color:var(--muted)}
+  .cat-h .chev{margin-left:auto;width:26px;height:26px;flex:0 0 auto;transition:transform .25s;color:var(--muted)}
+  .cat.open .chev{transform:rotate(180deg)}
+  .cat-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .cat-inner{padding:0 18px 10px}
+
+  .svc{border-top:1px solid rgba(18,59,82,.08)}
+  .svc:first-child{border-top:0}
+  .svc-h{display:flex;align-items:center;gap:10px;padding:13px 6px;cursor:pointer}
+  .svc.flat .svc-h{cursor:default}
+  .svc .nm{font-weight:600;font-size:.96rem;color:var(--ink)}
+  .svc .from{margin-left:auto;font-family:'Fredoka';font-weight:600;color:var(--carwash-d);white-space:nowrap}
+  .svc .from small{font-size:.66rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-right:5px;font-family:'Open Sans'}
+  .svc .chev2{width:20px;height:20px;flex:0 0 auto;color:var(--muted);transition:transform .25s}
+  .svc.open .chev2{transform:rotate(180deg)}
+  .svc-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .sizes{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;padding:4px 0 14px}
+  .sz{display:flex;justify-content:space-between;align-items:center;background:var(--ivory);border-radius:10px;padding:9px 12px;font-size:.9rem}
+  .sz span{color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+  .sz b{font-family:'Fredoka';color:var(--navy);font-size:1.02rem}
+  .sz.na b{color:#c2ccd2}
+
+  .cat.c-cw .ic{background:rgba(22,184,176,.14)} .cat.c-cw .from{color:var(--carwash-d)}
+  .cat.c-fo .ic{background:rgba(118,87,200,.14)} .cat.c-fo .from{color:var(--food-d)}
+  .cat.c-fu .ic{background:rgba(79,175,98,.14)}  .cat.c-fu .from{color:var(--fun-d)}
+  .cat.c-fa .ic{background:rgba(244,124,56,.14)} .cat.c-fa .from{color:var(--family-d)}
+  .cat.c-nv .ic{background:rgba(18,59,82,.1)}    .cat.c-nv .from{color:var(--navy)}
+
+  .cta-box{text-align:center;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka';font-weight:600;font-size:1rem;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .18s,background .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:#25D366;color:#fff;box-shadow:0 12px 26px -12px rgba(37,211,102,.8)}
+  .btn-wa:hover{background:#1ebe5a}
+  .cta-box p{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;padding:30px 20px;font-size:.86rem;margin-top:40px}
+  footer a{color:var(--sky);font-weight:600}
+
+  .wa-fab{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:transform .2s}
+  .wa-fab:hover{transform:scale(1.08)}
+  .wa-fab svg{width:32px;height:32px;color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" aria-label="ISLA SPOT">
+      <video class="logo-anim" autoplay muted loop playsinline poster="assets/logo-anim-poster.jpg">
+        <source src="assets/logo-anim.webm" type="video/webm" /><source src="assets/logo-anim.mp4" type="video/mp4" />
+      </video>
+    </a>
+    <div class="nav-right">
+      <a class="back" href="index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg><span data-es="Volver" data-en="Back">Volver</span></a>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button id="btnEs" class="on" onclick="setLang('es')">ES</button>
+        <button id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="clouds"></div>
+  <div class="wrap">
+    <div class="ey" data-es="ISLA SPOT · Car Wash" data-en="ISLA SPOT · Car Wash">ISLA SPOT · Car Wash</div>
+    <h1 data-es="Lista de precios" data-en="Price list">Lista de precios</h1>
+    <p data-es="Toca una categoría para abrirla y cada servicio para ver sus precios por tamaño de vehículo." data-en="Tap a category to open it, and each service to see its prices by vehicle size.">Toca una categoría para abrirla y cada servicio para ver sus precios por tamaño de vehículo.</p>
+    <div class="note">🚗 <span data-es="Precios según tamaño: Sedán · SUV · Pickup · XL · XXL · XXXL · Moto" data-en="Prices by size: Sedan · SUV · Pickup · XL · XXL · XXXL · Motorcycle">Precios según tamaño: Sedán · SUV · Pickup · XL · XXL · XXXL · Moto</span></div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap" id="app"></div>
+
+  <div class="wrap cta-box">
+    <p data-es="¿Dudas o quieres agendar? Escríbenos directo." data-en="Questions or want to book? Message us directly.">¿Dudas o quieres agendar? Escríbenos directo.</p>
+    <a class="btn btn-wa" href="https://wa.me/50761976277?text=Hola%20ISLA%20SPOT%2C%20quiero%20info%20del%20car%20wash" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01z"/></svg>
+      WhatsApp 6197-6277
+    </a>
+  </div>
+</main>
+
+<a class="wa-fab" href="https://wa.me/50761976277?text=Hola%20ISLA%20SPOT%2C%20quiero%20info" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01z"/></svg>
+</a>
+
+<footer>
+  <p>© <span id="y"></span> ISLA SPOT · <a href="index.html" data-es="Volver al inicio" data-en="Back home">Volver al inicio</a></p>
+</footer>
+
+<script>
+  var SIZES=[["es","Sedán","en","Sedan"],["es","SUV","en","SUV"],["es","Pickup","en","Pickup"],["es","XL","en","XL"],["es","XXL","en","XXL"],["es","XXXL","en","XXXL"],["es","Moto","en","Moto"]];
+  var SIZE_LABELS=["Sedán","SUV","Pickup","XL","XXL","XXXL","Moto"];
+  // precio null = no disponible (X)
+  var DATA=[
+    {c:"c-cw",ic:"🚗",es:"Lavados",en:"Washes",d_es:"Lavado de tu vehículo",d_en:"Vehicle washing",sized:true,s:[
+      {es:'Lavado completo',en:'Full wash',p:[10,12,14,14,16,18,6]},
+      {es:'Lavado por fuera',en:'Exterior wash',p:[7,9,11,11,13,15,null]},
+      {es:'Lavado "La Isla"',en:'"La Isla" wash',p:[25,30,30,30,40,42,12]},
+      {es:'Lavado de motor',en:'Engine wash',p:[25,25,25,25,40,40,null]},
+      {es:'Lavado de motor con vapor',en:'Steam engine wash',p:[35,40,40,40,40,40,null]},
+      {es:'Aspirado',en:'Vacuuming',p:[5,6,6,8,10,12,null]},
+    ]},
+    {c:"c-fo",ic:"✨",es:"Encerado y Protección",en:"Wax & Protection",d_es:"Brillo y cuidado de pintura",d_en:"Shine & paint care",sized:true,s:[
+      {es:'Encerado líquido',en:'Liquid wax',p:[10,10,10,10,20,20,4]},
+      {es:'Encerado en pasta',en:'Paste wax',p:[15,15,15,20,20,20,6]},
+      {es:'Encerado en pasta cerámica',en:'Ceramic paste wax',p:[20,20,20,25,25,30,10]},
+      {es:'Sellado cerámico (4 meses)',en:'Ceramic seal (4 months)',p:[30,30,30,40,40,40,20]},
+      {es:'Lluvia ácida',en:'Acid rain treatment',p:[10,10,10,10,10,10,null]},
+      {es:'Lluvia ácida y lípido',en:'Acid rain + lipid',p:[10,10,10,10,15,15,null]},
+      {es:'Hidratación plásticos exteriores',en:'Exterior plastics hydration',p:[10,10,10,15,15,15,7]},
+    ]},
+    {c:"c-fu",ic:"💎",es:"Pulido y Detallado",en:"Polishing & Detailing",d_es:"Corrección de pintura",d_en:"Paint correction",sized:true,s:[
+      {es:'Limpieza de cromos',en:'Chrome cleaning',p:[10,10,15,15,15,15,5]},
+      {es:'Pulimiento de 1 pieza',en:'1-piece polishing',p:[25,25,25,25,25,25,25]},
+      {es:'Pulimiento de 2 o más piezas',en:'2+ piece polishing',p:[35,35,35,35,35,35,50]},
+      {es:'Pulimiento y paso brillo',en:'Polish + gloss pass',p:[70,70,80,80,100,100,100]},
+      {es:'Pulimiento 3 pasos completo',en:'Full 3-step polishing',p:[160,170,170,180,180,200,95]},
+      {es:'Descontaminación de pintura',en:'Paint decontamination',p:[45,70,70,80,80,110,30]},
+    ]},
+    {c:"c-fa",ic:"➕",es:"Extras y Detallado",en:"Extras & Detailing",d_es:"Precio único",d_en:"Flat price",sized:false,s:[
+      {es:'Limpieza de motor (sin vapor)',en:'Engine cleaning (no steam)',f:15},
+      {es:'Limpieza de motor (con vapor)',en:'Engine cleaning (steam)',f:35},
+      {es:'Limpieza de tapicería',en:'Upholstery cleaning',f:60},
+      {es:'Pulido de faros',en:'Headlight polishing',f:25},
+      {es:'Restauración de plásticos',en:'Plastic restoration',f:30},
+      {es:'Tratamiento de cuero',en:'Leather treatment',f:40},
+      {es:'Odorización interior',en:'Interior odorizing',f:20},
+      {es:'Anti lluvia (vidrios)',en:'Rain repellent (glass)',f:25},
+    ]},
+    {c:"c-cw",ic:"🛋️",es:"Interiores",en:"Interiors",d_es:"Limpieza por dentro",d_en:"Inside cleaning",sized:true,s:[
+      {es:'Hidratación de plásticos interiores',en:'Interior plastics hydration',p:[10,12,12,14,15,16,null]},
+      {es:'Cepillado de asientos',en:'Seat brushing',p:[30,30,30,30,30,30,null]},
+      {es:'Limpieza de interiores',en:'Interior cleaning',p:[60,70,70,80,90,90,null]},
+      {es:'Limpieza de interiores profunda',en:'Deep interior cleaning',p:[90,100,100,120,140,160,null]},
+      {es:'Hidratación de asientos (cuero)',en:'Leather seat hydration',p:[20,20,20,25,25,30,10]},
+      {es:'Fumigación',en:'Fumigation',p:[25,25,25,25,25,25,null]},
+    ]},
+    {c:"c-fo",ic:"🛡️",es:"Cerámicos",en:"Ceramic coatings",d_es:"Protección de larga duración",d_en:"Long-lasting protection",sized:true,s:[
+      {es:'Cerámico carrocería',en:'Body ceramic',p:[300,350,400,450,500,500,150]},
+      {es:'Cerámico rines',en:'Rim ceramic',p:[50,50,50,50,50,50,null]},
+      {es:'Cerámico vidrios',en:'Glass ceramic',p:[50,50,50,50,65,65,null]},
+      {es:'Cerámico plásticos interiores',en:'Interior plastics ceramic',p:[100,120,120,130,140,160,null]},
+      {es:'Cerámico asientos',en:'Seat ceramic',p:[100,150,150,165,165,175,55]},
+    ]},
+    {c:"c-nv",ic:"🎞️",es:"Papel Ahumado",en:"Window Tint",d_es:"Polarizado de vidrios",d_en:"Window tinting",sized:true,s:[
+      {es:'Papel ahumado',en:'Window tint',p:[220,220,220,220,220,220,null]},
+      {es:'Papel ahumado nano cerámico',en:'Nano ceramic tint',p:[270,270,270,270,270,290,null]},
+    ]},
+  ];
+
+  function money(n){return '$'+n;}
+  function minPrice(p){var v=p.filter(function(x){return x!=null;}); return v.length?Math.min.apply(null,v):null;}
+
+  function render(lang){
+    var app=document.getElementById('app'); app.innerHTML='';
+    var fromTxt=lang==='en'?'from':'desde';
+    DATA.forEach(function(cat,ci){
+      var catEl=document.createElement('div'); catEl.className='cat '+cat.c;
+      var name=lang==='en'?cat.en:cat.es; var desc=lang==='en'?cat.d_en:cat.d_es;
+      var rows='';
+      cat.s.forEach(function(sv,si){
+        var nm=lang==='en'?sv.en:sv.es;
+        if(cat.sized){
+          var mn=minPrice(sv.p);
+          var chips='';
+          sv.p.forEach(function(pr,k){
+            chips+='<div class="sz'+(pr==null?' na':'')+'"><span>'+SIZE_LABELS[k]+'</span><b>'+(pr==null?'—':money(pr))+'</b></div>';
+          });
+          rows+='<div class="svc" data-si="'+ci+'-'+si+'">'
+            +'<div class="svc-h" onclick="toggleSvc(this)">'
+            +'<span class="nm">'+nm+'</span>'
+            +'<span class="from"><small>'+fromTxt+'</small>'+(mn!=null?money(mn):'—')+'</span>'
+            +'<svg class="chev2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>'
+            +'</div>'
+            +'<div class="svc-body"><div class="sizes">'+chips+'</div></div>'
+            +'</div>';
+        }else{
+          rows+='<div class="svc flat"><div class="svc-h">'
+            +'<span class="nm">'+nm+'</span>'
+            +'<span class="from">'+money(sv.f)+'</span>'
+            +'</div></div>';
+        }
+      });
+      catEl.innerHTML='<div class="cat-h" onclick="toggleCat(this)">'
+        +'<span class="ic">'+cat.ic+'</span>'
+        +'<span class="t"><b>'+name+'</b><span>'+desc+'</span></span>'
+        +'<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>'
+        +'</div>'
+        +'<div class="cat-body"><div class="cat-inner">'+rows+'</div></div>';
+      app.appendChild(catEl);
+    });
+  }
+
+  function toggleCat(h){
+    var cat=h.parentElement; var body=cat.querySelector('.cat-body');
+    var open=cat.classList.toggle('open');
+    body.style.maxHeight = open ? body.scrollHeight+'px' : '0';
+  }
+  function toggleSvc(h){
+    var svc=h.parentElement; var body=svc.querySelector('.svc-body');
+    var open=svc.classList.toggle('open');
+    body.style.maxHeight = open ? body.scrollHeight+'px' : '0';
+    // ajustar la categoría contenedora para que no corte
+    var catBody=svc.closest('.cat-body');
+    if(catBody && svc.closest('.cat').classList.contains('open')){ catBody.style.maxHeight = catBody.scrollHeight + 400 + 'px'; }
+  }
+
+  function setLang(lang){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-es]').forEach(function(el){
+      var v=lang==='en'?el.getAttribute('data-en'):el.getAttribute('data-es'); if(v!==null) el.textContent=v;
+    });
+    document.getElementById('btnEs').classList.toggle('on',lang==='es');
+    document.getElementById('btnEn').classList.toggle('on',lang==='en');
+    try{localStorage.setItem('islaspot_lang',lang);}catch(e){}
+    render(lang);
+  }
+
+  (function(){var s='es';try{s=localStorage.getItem('islaspot_lang')||'es';}catch(e){} setLang(s);})();
+  document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
