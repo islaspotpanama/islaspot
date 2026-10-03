@@ -228,6 +228,27 @@
   .info-row p{color:var(--muted);font-size:.94rem}
   .info-row a{color:var(--carwash-d);font-weight:700}
 
+  /* ===== TRABAJA CON NOSOTROS ===== */
+  .join{background:var(--ivory-2)}
+  .join-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center}
+  .join h2{font-size:clamp(2rem,4.4vw,2.9rem);color:var(--navy);margin:14px 0 14px}
+  .join p.lead{color:var(--muted);font-size:1.08rem;margin-bottom:22px;max-width:480px}
+  .join .perks{display:flex;flex-direction:column;gap:12px;margin-bottom:6px}
+  .perk{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--navy);font-size:.98rem}
+  .perk .pic{width:40px;height:40px;flex:0 0 auto;border-radius:12px;display:grid;place-items:center;color:#fff;font-size:1.1rem}
+  .form-card{background:#fff;border-radius:24px;padding:32px;box-shadow:var(--shadow);border:1px solid rgba(18,59,82,.05)}
+  .form-card h3{font-size:1.4rem;color:var(--navy);margin-bottom:4px}
+  .form-card .sb{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-weight:600;font-size:.86rem;color:var(--navy);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;border:1.5px solid rgba(18,59,82,.15);border-radius:12px;padding:12px 14px;font-size:.96rem;font-family:inherit;color:var(--ink);background:var(--ivory-2)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--carwash)}
+  .field textarea{resize:vertical;min-height:72px}
+  .cv-note{display:flex;gap:10px;align-items:flex-start;background:rgba(22,184,176,.1);border-radius:12px;padding:12px 14px;margin:4px 0 16px;font-size:.84rem;color:var(--carwash-d)}
+  .cv-note svg{width:20px;height:20px;flex:0 0 auto;margin-top:1px}
+  .btn-wa-full{width:100%;justify-content:center;background:#25D366;color:#fff}
+  .btn-wa-full:hover{background:#1ebe5a}
+
   /* ===== SUBSCRIBE ===== */
   .sub-sec{background:linear-gradient(165deg,var(--sky),var(--sky-deep));color:var(--navy);position:relative;overflow:hidden}
   .sub-sec .clouds{position:absolute;inset:0;background:radial-gradient(80px 26px at 18% 30%,rgba(255,255,255,.6),transparent 70%),radial-gradient(90px 28px at 82% 24%,rgba(255,255,255,.5),transparent 70%);pointer-events:none}
@@ -261,7 +282,7 @@
 
   /* ===== RESPONSIVE ===== */
   @media(max-width:920px){
-    .hero-grid,.about-grid,.promo-in,.loc-grid,.feat-in{grid-template-columns:1fr;gap:36px}
+    .hero-grid,.about-grid,.promo-in,.loc-grid,.feat-in,.join-grid{grid-template-columns:1fr;gap:36px}
     .exp-grid{grid-template-columns:1fr 1fr}
     .menu-grid{grid-template-columns:1fr}
     .hero-art{order:-1}
@@ -299,6 +320,7 @@
       <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
       <a href="#menu" data-es="Precios &amp; Menú" data-en="Prices &amp; Menu">Precios &amp; Menú</a>
       <a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
+      <a href="#trabaja" data-es="Empleo" data-en="Careers">Empleo</a>
     </nav>
     <div class="nav-right">
       <div class="lang" role="group" aria-label="Idioma">
@@ -536,6 +558,56 @@
   </div>
 </section>
 
+<!-- ===== TRABAJA CON NOSOTROS ===== -->
+<section class="sec join" id="trabaja">
+  <div class="wrap join-grid">
+    <div>
+      <span class="eyebrow" data-es="Únete al equipo" data-en="Join the team">Únete al equipo</span>
+      <h2 data-es="Trabaja con nosotros" data-en="Work with us">Trabaja con nosotros</h2>
+      <p class="lead" data-es="ISLA SPOT es una empresa de amigos con buena vibra. Si te gusta el buen servicio y trabajar en equipo, queremos conocerte. Déjanos tus datos y adjunta tu CV." data-en="ISLA SPOT is a company of friends with good vibes. If you love great service and teamwork, we want to meet you. Send us your details and attach your CV.">ISLA SPOT es una empresa de amigos con buena vibra. Si te gusta el buen servicio y trabajar en equipo, queremos conocerte. Déjanos tus datos y adjunta tu CV.</p>
+      <div class="perks">
+        <div class="perk"><span class="pic" style="background:var(--carwash)">🤝</span><span data-es="Ambiente de trabajo joven y positivo" data-en="Young, positive work environment">Ambiente de trabajo joven y positivo</span></div>
+        <div class="perk"><span class="pic" style="background:var(--family)">📈</span><span data-es="Oportunidad de crecer con la empresa" data-en="Opportunity to grow with the company">Oportunidad de crecer con la empresa</span></div>
+        <div class="perk"><span class="pic" style="background:var(--fun)">📍</span><span data-es="Un solo lugar: car wash, food y más" data-en="One spot: car wash, food and more">Un solo lugar: car wash, food y más</span></div>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3 data-es="Postúlate" data-en="Apply now">Postúlate</h3>
+      <p class="sb" data-es="Completa tus datos y envíanos tu CV por WhatsApp." data-en="Fill in your details and send us your CV via WhatsApp.">Completa tus datos y envíanos tu CV por WhatsApp.</p>
+      <form onsubmit="return applyJob(event)">
+        <div class="field">
+          <label data-es="Nombre completo" data-en="Full name">Nombre completo</label>
+          <input type="text" id="jobName" required placeholder="Ej: Juan Pérez" data-es-ph="Ej: Juan Pérez" data-en-ph="E.g. John Smith" />
+        </div>
+        <div class="field">
+          <label data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp">Teléfono / WhatsApp</label>
+          <input type="tel" id="jobPhone" required placeholder="Ej: 6000-0000" data-es-ph="Ej: 6000-0000" data-en-ph="E.g. 6000-0000" />
+        </div>
+        <div class="field">
+          <label data-es="Puesto de interés" data-en="Position of interest">Puesto de interés</label>
+          <select id="jobRole">
+            <option data-es="Car Wash / Lavado" data-en="Car Wash">Car Wash / Lavado</option>
+            <option data-es="Detallado / Pulido" data-en="Detailing / Polishing">Detallado / Pulido</option>
+            <option data-es="Food / Cocina" data-en="Food / Kitchen">Food / Cocina</option>
+            <option data-es="Atención al cliente" data-en="Customer service">Atención al cliente</option>
+            <option data-es="Administración" data-en="Administration">Administración</option>
+            <option data-es="Otro" data-en="Other">Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-es="Mensaje (opcional)" data-en="Message (optional)">Mensaje (opcional)</label>
+          <textarea id="jobMsg" placeholder="Cuéntanos un poco de ti…" data-es-ph="Cuéntanos un poco de ti…" data-en-ph="Tell us a bit about you…"></textarea>
+        </div>
+        <div class="cv-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span data-es="Al enviar se abrirá WhatsApp con tus datos. Solo adjunta tu CV (PDF) en el chat y envíalo. 📎" data-en="On submit, WhatsApp opens with your details. Just attach your CV (PDF) in the chat and send it. 📎">Al enviar se abrirá WhatsApp con tus datos. Solo adjunta tu CV (PDF) en el chat y envíalo. 📎</span>
+        </div>
+        <button type="submit" class="btn btn-wa-full" data-es="Enviar postulación por WhatsApp" data-en="Send application via WhatsApp">Enviar postulación por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ===== SUBSCRIBE ===== -->
 <section class="sec sub-sec" id="suscribir">
   <div class="clouds"></div>
@@ -570,6 +642,7 @@
         <a href="#nosotros" data-es="Nosotros" data-en="About">Nosotros</a>
         <a href="#menu" data-es="Precios &amp; Menú" data-en="Prices &amp; Menu">Precios &amp; Menú</a>
         <a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
+        <a href="#trabaja" data-es="Trabaja con nosotros" data-en="Work with us">Trabaja con nosotros</a>
       </div>
       <div>
         <h5 data-es="Contacto" data-en="Contact">Contacto</h5>
@@ -613,6 +686,22 @@
     document.getElementById('subMsg').textContent=lang==='en'?'Thanks! We\'ll keep you posted. 🎉':'¡Listo! Te avisamos apenas abramos. 🎉';
     return false;
   }
+  // Postulación de empleo → WhatsApp con datos pre-llenados
+  function applyJob(e){
+    e.preventDefault();
+    var lang=document.documentElement.lang;
+    var name=document.getElementById('jobName').value.trim();
+    var phone=document.getElementById('jobPhone').value.trim();
+    var roleSel=document.getElementById('jobRole');
+    var role=roleSel.options[roleSel.selectedIndex].text;
+    var msg=document.getElementById('jobMsg').value.trim();
+    var text = lang==='en'
+      ? ('Hi ISLA SPOT! I want to apply for a job.\n\nName: '+name+'\nPhone: '+phone+'\nPosition: '+role+(msg?('\nAbout me: '+msg):'')+'\n\n(I\'m attaching my CV here 📎)')
+      : ('¡Hola ISLA SPOT! Quiero postularme para trabajar.\n\nNombre: '+name+'\nTeléfono: '+phone+'\nPuesto: '+role+(msg?('\nSobre mí: '+msg):'')+'\n\n(Adjunto mi CV aquí 📎)');
+    window.open('https://wa.me/50761976277?text='+encodeURIComponent(text),'_blank');
+    return false;
+  }
+
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
